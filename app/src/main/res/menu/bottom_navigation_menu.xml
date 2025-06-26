@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/navigation_prediction"
+        android:icon="@drawable/ic_prediction"
+        android:title="Prediksi" />
+    <item
+        android:id="@+id/navigation_visualization"
+        android:icon="@drawable/ic_visualization"
+        android:title="Visualisasi" />
+</menu> 

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="400dp"
+    android:height="600dp"
+    android:viewportWidth="400"
+    android:viewportHeight="600">
+
+    <!-- Background -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M0,0h400v600h-400z"/>
+
+    <!-- Title -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M50,50h300v40h-300z"/>
+
+    <!-- Input Layer -->
+    <path
+        android:fillColor="#E3F2FD"
+        android:pathData="M50,120h300v60h-300z"/>
+
+    <!-- LSTM Layer 1 -->
+    <path
+        android:fillColor="#BBDEFB"
+        android:pathData="M50,200h300v80h-300z"/>
+
+    <!-- LSTM Layer 2 -->
+    <path
+        android:fillColor="#90CAF9"
+        android:pathData="M50,300h300v80h-300z"/>
+
+    <!-- Dense Layer -->
+    <path
+        android:fillColor="#64B5F6"
+        android:pathData="M50,400h300v60h-300z"/>
+
+    <!-- Output Layer -->
+    <path
+        android:fillColor="#42A5F5"
+        android:pathData="M50,480h300v40h-300z"/>
+
+    <!-- Text Labels -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M160,75h80v10h-80z"/>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M160,145h80v10h-80z"/>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M160,235h80v10h-80z"/>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M160,335h80v10h-80z"/>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M160,425h80v10h-80z"/>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M160,495h80v10h-80z"/>
+
+</vector> 

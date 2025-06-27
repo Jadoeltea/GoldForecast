@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Uas_231352002</string>
-</resources>
+<string name="cara_penggunaan">
+. Masukkan harga awal dan jumlah hari simulasi.\n
+. Tekan tombol Simulasi untuk melihat grafik.\n
+. Hasil akhir simulasi akan muncul di bawah grafik.\n
+. Untuk prediksi, masukkan data fitur sesuai petunjuk.\n
+. Tekan tombol Prediksi untuk melihat hasil prediksi harga emas.
+</string>
+   </resources>

@@ -62,14 +62,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
                         android:hint="Harga Awal"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:visibility="gone">
+                        <!-- Input manual harga awal dihilangkan, diganti otomatis dari data historis sesuai range -->
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/initialPriceInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="numberDecimal" />
-
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout

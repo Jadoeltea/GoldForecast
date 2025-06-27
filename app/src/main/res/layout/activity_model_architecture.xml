@@ -24,22 +24,107 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <com.google.android.material.card.MaterialCardView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <TextView
-                android:id="@+id/modelArchitectureText"
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:textSize="14sp"
-                android:lineSpacingExtra="4dp" />
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
 
-        </com.google.android.material.card.MaterialCardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dataset yang digunakan: https://www.kaggle.com/datasets/altruistdelhite04/gold-price-data"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:autoLink="web"
+                        android:layout_marginBottom="8dp"/>
+
+                    <com.github.chrisbanes.photoview.PhotoView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/dataset"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="Gambar dataset"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Contoh Tabel Data"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"/>
+
+                    <com.github.chrisbanes.photoview.PhotoView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/tabel"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="Gambar tabel data"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Arsitektur Model &amp; Evaluasi"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"/>
+
+                    <com.github.chrisbanes.photoview.PhotoView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/loss_mse"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="Grafik Loss (MSE)"/>
+
+                    <com.github.chrisbanes.photoview.PhotoView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/mae"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="Grafik MAE"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Prediksi Harga Emas dalam Rupiah"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Model LSTM-RNN dilatih menggunakan data harga emas historis multivariat. Hasil prediksi harga emas dalam rupiah dapat dilihat pada grafik berikut. Model dievaluasi menggunakan metrik MSE dan MAE untuk memastikan akurasi prediksi."
+                        android:textSize="14sp"
+                        android:layout_marginBottom="8dp"/>
+
+                    <com.github.chrisbanes.photoview.PhotoView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/prediksi_rupiah"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="Grafik prediksi harga emas dalam rupiah"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
 

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/simulationLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -75,17 +77,56 @@
         android:text="Mulai Simulasi"
         android:layout_marginBottom="16dp"/>
 
-    <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/simulationChart"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/backButton"
+        <TextView
+            android:id="@+id/yAxisLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Harga Emas"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:rotation="-90"
+            android:layout_marginEnd="4dp"/>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/simulationChart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/xAxisLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Kembali"
+        android:text="Hari"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/finalPriceTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Harga Akhir: -"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
         android:layout_marginTop="16dp"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_navigation_menu" />
 
 </LinearLayout> 

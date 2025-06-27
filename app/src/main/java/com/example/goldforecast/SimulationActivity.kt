@@ -86,14 +86,12 @@ class SimulationActivity : AppCompatActivity() {
                 setTouchEnabled(true)
                 isDragEnabled = true
                 setScaleEnabled(true)
-                setPinchZoom(true)
-                setDoubleTapToZoomEnabled(true)
+                setPinchZoom(false)
+                setDoubleTapToZoomEnabled(false)
                 isHighlightPerDragEnabled = true
                 isHighlightPerTapEnabled = true
                 setScaleXEnabled(true)
                 setScaleYEnabled(true)
-                viewPortHandler.setMaximumScaleX(10f)
-                viewPortHandler.setMaximumScaleY(10f)
                 
                 xAxis.apply {
                     position = XAxis.XAxisPosition.BOTTOM
@@ -173,14 +171,29 @@ class SimulationActivity : AppCompatActivity() {
             }
 
             // Update chart
+            val valueFormatter = object : com.github.mikephil.charting.formatter.ValueFormatter() {
+                override fun getPointLabel(entry: Entry?): String {
+                    if (entry == null) return ""
+                    val x = entry.x.toInt()
+                    return when (x) {
+                        0, entries.size - 1 -> "%.1f".format(entry.y)
+                        else -> ""
+                    }
+                }
+            }
+
             val dataSet = LineDataSet(entries, "Simulasi Harga").apply {
                 color = Color.rgb(255, 165, 0) // Warna oranye
-                setDrawCircles(false)
+                setDrawCircles(true)
+                circleRadius = 3f
+                setCircleColor(Color.rgb(255, 165, 0))
+                setDrawValues(true)
+                valueTextSize = 10f
+                valueTextColor = Color.rgb(255, 165, 0)
+                setDrawFilled(false)
                 lineWidth = 2f
-                setDrawFilled(true)
-                fillColor = Color.rgb(255, 165, 0)
-                fillAlpha = 30
-                mode = LineDataSet.Mode.CUBIC_BEZIER
+                mode = LineDataSet.Mode.LINEAR
+                this.valueFormatter = valueFormatter
             }
 
             chart.data = LineData(dataSet)
